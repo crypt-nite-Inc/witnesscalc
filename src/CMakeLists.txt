@@ -65,21 +65,21 @@ set(LIB_SOURCES
     witnesscalc.cpp
     )
 
-# cntest
-set(CN_SOURCES ${LIB_SOURCES}
-    cntest.cpp
-    witnesscalc_cntest.h
-    witnesscalc_cntest.cpp
+# cncircuit
+set(CNUB_SOURCES ${LIB_SOURCES}
+    cncircuit.cpp
+    witnesscalc_cncircuit.h
+    witnesscalc_cncircuit.cpp
     )
 
-add_library(witnesscalc_cntest SHARED ${CN_SOURCES})
-add_library(witnesscalc_cntestStatic STATIC ${CN_SOURCES})
-set_target_properties(witnesscalc_cntestStatic PROPERTIES OUTPUT_NAME witnesscalc_cntest)
+add_library(witnesscalc_cncircuit SHARED ${CNUB_SOURCES})
+add_library(witnesscalc_cncircuitStatic STATIC ${CNUB_SOURCES})
+set_target_properties(witnesscalc_cncircuitStatic PROPERTIES OUTPUT_NAME witnesscalc_cncircuit)
 
-add_executable(cntest main.cpp)
-target_link_libraries(cntest witnesscalc_cntestStatic)
+add_executable(cncircuit main.cpp)
+target_link_libraries(cncircuit witnesscalc_cncircuitStatic)
 
-target_compile_definitions(witnesscalc_cntest PUBLIC CIRCUIT_NAME=cntest)
-target_compile_definitions(witnesscalc_cntestStatic PUBLIC CIRCUIT_NAME=cntest)
-target_compile_definitions(cntest PUBLIC CIRCUIT_NAME=cntest)
+target_compile_definitions(witnesscalc_cncircuit PUBLIC CIRCUIT_NAME=cncircuit)
+target_compile_definitions(witnesscalc_cncircuitStatic PUBLIC CIRCUIT_NAME=cncircuit)
+target_compile_definitions(cncircuit PUBLIC CIRCUIT_NAME=cncircuit)
 

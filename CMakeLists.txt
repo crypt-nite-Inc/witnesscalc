@@ -31,12 +31,13 @@ include_directories(BEFORE ${GMP_INCLUDE_DIR})
 add_subdirectory(src)
 
 
+
 install(TARGETS
     tests
     test_platform
-    cntest
-    witnesscalc_cntest
-    witnesscalc_cntestStatic
+    cncircuit
+    witnesscalc_cncircuit
+    witnesscalc_cncircuitStatic
     fr
     RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX}/bin
     BUNDLE DESTINATION ${CMAKE_INSTALL_PREFIX}/app
@@ -46,10 +47,10 @@ install(FILES "${GMP_LIB_DIR}/${GMP_LIB_FILE}"
     DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
 
 install(FILES
-    src/cntest.dat
+    src/cncircuit.dat
     DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
 
 install(FILES
     src/witnesscalc.h
-    src/witnesscalc_cntest.h
+    src/witnesscalc_cncircuit.h
     DESTINATION ${CMAKE_INSTALL_PREFIX}/include)
