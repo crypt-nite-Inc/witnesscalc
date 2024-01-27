@@ -32,7 +32,7 @@ if(TARGET_PLATFORM MATCHES "android")
 
     message("CMAKE_ANDROID_ARCH_ABI=" ${CMAKE_ANDROID_ARCH_ABI})
 
-elseif(TARGET_PLATFORM MATCHES "ios_x86_64")
+elseif(TARGET_PLATFORM MATCHES "ios_simulator")
 
     set(CMAKE_SYSTEM_NAME iOS)
     if(TARGET_PLATFORM MATCHES "ios_simulator_x86_64")

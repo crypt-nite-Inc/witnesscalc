@@ -26,8 +26,12 @@ ios:
 	cmake .. -GXcode -DTARGET_PLATFORM=IOS -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=../package_ios && \
     echo "" && echo "Now open Xcode and compile the generated project" && echo ""
 
-ios_x86_64:
-	rm -rf build_witnesscalc_ios_x86_64 package_ios_simulator && mkdir build_witnesscalc_ios_x86_64 package_ios_simulator && cd build_witnesscalc_ios_x86_64 && \
-	cmake .. -GXcode -DTARGET_PLATFORM=IOS_x86_64 -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=../package_ios_simulator && \
+ios_simulator_arm64:
+	rm -rf build_witnesscalc_ios_simulator_arm64 package_ios_simulator_arm64 && mkdir -p build_witnesscalc_ios_simulator_arm64 && cd build_witnesscalc_ios_simulator_arm64 && \
+	cmake .. -GXcode -DTARGET_PLATFORM=IOS_SIMULATOR -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=../package_ios_simulator_arm64 && \
     echo "" && echo "Now open Xcode and compile the generated project" && echo ""
 
+ios_simulator_x86_64:
+	rm -rf build_witnesscalc_ios_simulator_x86_64 package_ios_simulator_x86_64 && mkdir -p build_witnesscalc_ios_simulator_x86_64 && cd build_witnesscalc_ios_simulator_x86_64 && \
+	cmake .. -GXcode -DTARGET_PLATFORM=IOS_SIMULATOR_x86_64 -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=../package_ios_simulator_x86_64 && \
+    echo "" && echo "Now open Xcode and compile the generated project" && echo ""
