@@ -42,7 +42,7 @@ function mv_built_lib() {
 function prepare() {
     #if [[ -e $working_dir ]]; then rm -rf $working_dir; fi
     mkdir -p $frameworks $resources
-    rm -fr  $frameworks/* $resources/* $working_dir/build_witnesscalc_ios_x86_64 $working_dir/package_ios_simulator \
+    rm -fr  $frameworks/* $resources/* $working_dir/build_witnesscalc_ios* $working_dir/package_ios* \
      $working_dir/depends/gmp/package_*
 }
 
@@ -110,9 +110,9 @@ function copy_circuit() {
 }
 # ########## ########## ########## ########## ########## ########## ########## #
 
-#prepare
-#build_gmp
-#build_witnesscalc
+prepare
+build_gmp
+build_witnesscalc
 make_framework
 copy_circuit
 
