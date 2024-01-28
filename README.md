@@ -118,9 +118,9 @@ Created a new script called build_witnesscalc.sh that will compile a cricuit cal
 		EOT
 ````
 2. Compile the circuit for c++
-````circom YOUR_CIRCUIT_NAME.circom --c
-
-````
+```
+circom YOUR_CIRCUIT_NAME.circom --c
+```
 This will create a folder named YOUR_CIRCUIT_NAME_cpp/YOUR_CIRCUIT_NAME.cpp and YOUR_CIRCUIT_NAME_cpp/YOUR_CIRCUIT_NAME.dat files
 
 3. Copy YOUR_CIRCUIT_NAME_cpp/YOUR_CIRCUIT_NAME.cpp and YOUR_CIRCUIT_NAME_cpp/YOUR_CIRCUIT_NAME.dat files to this project's src folder
