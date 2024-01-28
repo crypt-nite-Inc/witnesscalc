@@ -125,14 +125,14 @@ This will create a folder named YOUR_CIRCUIT_NAME_cpp/YOUR_CIRCUIT_NAME.cpp and 
 
 3. Copy YOUR_CIRCUIT_NAME_cpp/YOUR_CIRCUIT_NAME.cpp and YOUR_CIRCUIT_NAME_cpp/YOUR_CIRCUIT_NAME.dat files to this project's src folder
 
-````cp YOUR_CIRCUIT_NAME_cpp/YOUR_CIRCUIT_NAME.cpp ./src/
+```cp YOUR_CIRCUIT_NAME_cpp/YOUR_CIRCUIT_NAME.cpp ./src/
     cp YOUR_CIRCUIT_NAME_cpp/YOUR_CIRCUIT_NAME.dat  ./src/
-````
+```
 4. Add the namespace directive in YOUR_CIRCUIT_NAME.cpp as detailed in [## Updating circuits]
 5. create witnesscalc_<YOUR_CIRCUIT_NAME>.h and .cpp files - refer witnesscalc_cntest.h and witnesscalc_cntest.cpp
 6. update src/CMakeLists.txt files to define nee targets for your curcuit. refer to target like witnesscalc_cntest
 7. Run build_witnesscalc.sh as below. this will output frameworks and resources  folders at the same level as this projects root
-````./build_witnesscalc.sh
 
-````
+```./build_witnesscalc.sh
+```
 8. copy the .xcframework and the resources fiels to the ios project that will use the witness calculator. 
