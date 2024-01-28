@@ -95,7 +95,8 @@ witnesscalc is part of the iden3 project copyright 2022 0KIMS association and pu
 Created a new script called build_witnesscalc.sh that will compile a cricuit called cntest. This script also cretes xcframeworks that can be used in IOS projects. Below is the process to build a new circuit
 
 1. Create the curcuit. One example below
-		````cat <<EOT > YOUR_CIRCUIT_NAME.circom
+
+````cat <<EOT > YOUR_CIRCUIT_NAME.circom
 		pragma circom 2.0.0;
 
 		template Multiplier(n) {
@@ -117,9 +118,10 @@ Created a new script called build_witnesscalc.sh that will compile a cricuit cal
 		EOT
 		````
 2. Compile the circuit for c++
-		```` circom YOUR_CIRCUIT_NAME.circom --c
-		````
-		This will create a folder named YOUR_CIRCUIT_NAME_cpp/YOUR_CIRCUIT_NAME.cpp and YOUR_CIRCUIT_NAME_cpp/YOUR_CIRCUIT_NAME.dat files
+
+```` circom YOUR_CIRCUIT_NAME.circom --c
+````
+	This will create a folder named YOUR_CIRCUIT_NAME_cpp/YOUR_CIRCUIT_NAME.cpp and YOUR_CIRCUIT_NAME_cpp/YOUR_CIRCUIT_NAME.dat files
 3. Copy YOUR_CIRCUIT_NAME_cpp/YOUR_CIRCUIT_NAME.cpp and YOUR_CIRCUIT_NAME_cpp/YOUR_CIRCUIT_NAME.dat files to this project's src folder
 		```` cp YOUR_CIRCUIT_NAME_cpp/YOUR_CIRCUIT_NAME.cpp ./src/
 		cp YOUR_CIRCUIT_NAME_cpp/YOUR_CIRCUIT_NAME.dat  ./src/
