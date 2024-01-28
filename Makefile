@@ -22,12 +22,16 @@ android_x86_64:
 	make -j4 -vvv && make install
 
 ios:
-	rm -rf build_witnesscalc_ios && mkdir build_witnesscalc_ios && cd build_witnesscalc_ios && \
+	rm -rf build_witnesscalc_ios package_ios && mkdir build_witnesscalc_ios package_ios && cd build_witnesscalc_ios && \
 	cmake .. -GXcode -DTARGET_PLATFORM=IOS -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=../package_ios && \
     echo "" && echo "Now open Xcode and compile the generated project" && echo ""
 
-ios_x86_64:
-	rm -rf build_witnesscalc_ios_x86_64 && mkdir build_witnesscalc_ios_x86_64 && cd build_witnesscalc_ios_x86_64 && \
-	cmake .. -GXcode -DTARGET_PLATFORM=IOS_x86_64 -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=../package_ios_x86_64 && \
+ios_simulator_arm64:
+	rm -rf build_witnesscalc_ios_simulator_arm64 package_ios_simulator_arm64 && mkdir -p build_witnesscalc_ios_simulator_arm64 && cd build_witnesscalc_ios_simulator_arm64 && \
+	cmake .. -GXcode -DTARGET_PLATFORM=IOS_SIMULATOR -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=../package_ios_simulator_arm64 && \
     echo "" && echo "Now open Xcode and compile the generated project" && echo ""
 
+ios_simulator_x86_64:
+	rm -rf build_witnesscalc_ios_simulator_x86_64 package_ios_simulator_x86_64 && mkdir -p build_witnesscalc_ios_simulator_x86_64 && cd build_witnesscalc_ios_simulator_x86_64 && \
+	cmake .. -GXcode -DTARGET_PLATFORM=IOS_SIMULATOR_x86_64 -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=../package_ios_simulator_x86_64 && \
+    echo "" && echo "Now open Xcode and compile the generated project" && echo ""
